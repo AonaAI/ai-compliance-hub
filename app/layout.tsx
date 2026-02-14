@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "AI Compliance Hub — Track AI Regulations Worldwide",
@@ -53,7 +55,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-brand-950 text-white antialiased">{children}</body>
+      <body className="bg-brand-950 text-white antialiased">
+        <Header />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
